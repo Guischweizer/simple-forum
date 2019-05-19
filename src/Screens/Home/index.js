@@ -3,8 +3,10 @@ import Input from "../../Components/Input";
 
 import "./home.scss";
 import { createNewPost } from "../../api";
+import TextBox from "../../Components/TextBox";
+import Button from "../../Components/Button";
 
-const Home = ({ updatePostFeed }) => {
+const Home = () => {
   const [content, setContent] = useState();
   const [author, setAuthor] = useState();
   const handleSubmitButton = async () => {
@@ -23,19 +25,26 @@ const Home = ({ updatePostFeed }) => {
         <Input
           className="form__author-field"
           name="author"
-          placeholder="Please insert a cool name! Actually we don't care which name gonna be yours!"
+          suffix={" "}
+          placeholder="Please insert a cool name!"
           onChange={event => handleFormChange(event, "author")}
         />
       </div>
-      <Input
-        className="form__content-field simple-margin-top"
-        name="content"
-        placeholder="Please insert what you want to say here!"
-        onChange={event => handleFormChange(event, "content")}
-      />
-      {content && author && (
-        <button onClick={handleSubmitButton}>Submit</button>
-      )}
+      <div>
+        <TextBox
+          className="form__content-field simple-margin-top"
+          name="content"
+          suffix={" "}
+          maxlength={250}
+          columns="40"
+          rows="5"
+          placeholder="Please insert what you want to say here!"
+          onChange={event => handleFormChange(event, "content")}
+        />
+      </div>
+      <Button onClick={handleSubmitButton} textButton="Submit" theme="primary">
+        Submit
+      </Button>
     </div>
   );
 };
