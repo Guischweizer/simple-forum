@@ -1,15 +1,19 @@
 .form {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  text-align: center;
 
   &__author-field {
     width: 28rem;
+    background: #222f3e;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
   }
   &__content-field {
-    width: 28rem;
-    height: 15rem;
+    min-width: 28rem;
+    max-width: 28rem;
+    max-height: 12rem;
+    min-height: 10rem;
   }
 }

@@ -1,19 +1,28 @@
 import React from "react";
+import cn from "classnames";
 
-const Input = ({
+import "./text-box.scss";
+
+const TextBox = ({
   className,
   placeholder,
   name,
   value,
+  suffix = " ",
   type,
   onChange,
-  suffix = " ",
-  disabled
+  disabled,
+  maxlength,
+  columns,
+  rows
 }) => (
-  <input
+  <textarea
     value={value}
-    className={className}
+    className={cn(className, "text-box")}
     name={name}
+    rows={rows}
+    cols={columns}
+    maxlength={maxlength}
     autoComplete="off"
     placeholder={`${suffix} ${placeholder}`}
     type={type}
@@ -22,4 +31,4 @@ const Input = ({
   />
 );
 
-export default Input;
+export default TextBox;
