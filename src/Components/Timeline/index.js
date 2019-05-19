@@ -15,7 +15,7 @@ const Timeline = ({ allContent = foo }) => (
     <Header title="Timeline" />
     {allContent.map(content => (
       <div key={content.id}>
-        {`${content.author} say:`}
+        {`@${content.author} say:`}
         <div className="timeline__box">{content.content}</div>
       </div>
     ))}
