@@ -1,9 +1,9 @@
 import React from "react";
 import "./header.scss";
 
-const Header = () => (
+const Header = ({ title }) => (
   <header className="header">
-    <h1>Simple Forum</h1>
+    <h1>{title}</h1>
   </header>
 );
 
