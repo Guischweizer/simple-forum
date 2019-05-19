@@ -11,9 +11,9 @@ export const createNewPost = (content, author) => {
     content: content,
     author: author
   };
-  post("/posts", data);
+  post("posts", data);
 };
 
 export const getNewPost = () => {
-  get("/posts");
+  get("posts");
 };

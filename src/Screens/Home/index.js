@@ -13,7 +13,6 @@ const Home = () => {
   const handleSubmitButton = async () => {
     await createNewPost(content, author);
   };
-
   const handleFormChange = (event, key) => {
     key === "content"
       ? setContent(event.target.value)

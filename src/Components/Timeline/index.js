@@ -4,17 +4,17 @@ import "./timeline.scss";
 import Header from "../Header";
 
 const foo = [
-  { author: "Joao", content: "Que dia" },
-  { author: "Kadu", content: "To louco" },
-  { author: "Arnaldo", content: "Maconha" },
-  { author: "Robson", content: "Pq q eu to fazendo isso mesmo?" }
+  { id: 0, author: "Joao", content: "Que dia" },
+  { id: 1, author: "Kadu", content: "To louco" },
+  { id: 2, author: "Arnaldo", content: "Maconha" },
+  { id: 3, author: "Robson", content: "Pq q eu to fazendo isso mesmo?" }
 ];
 
 const Timeline = ({ allContent = foo }) => (
   <div className="timeline">
     <Header title="Timeline" />
     {allContent.map(content => (
-      <div>
+      <div key={content.id}>
         {`${content.author} say:`}
         <div className="timeline__box">{content.content}</div>
       </div>
