@@ -11,9 +11,9 @@ export const createNewPost = (content, author) => {
     content: content,
     author: author
   };
-  post("api/v1/posts", data);
+  post("/posts", data);
 };
 
 export const getNewPost = () => {
-  get("api/v1/posts");
+  get("/posts");
 };

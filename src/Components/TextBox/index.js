@@ -12,7 +12,7 @@ const TextBox = ({
   type,
   onChange,
   disabled,
-  maxlength,
+  maxLength,
   columns,
   rows
 }) => (
@@ -22,7 +22,7 @@ const TextBox = ({
     name={name}
     rows={rows}
     cols={columns}
-    maxlength={maxlength}
+    maxLength={maxLength}
     autoComplete="off"
     placeholder={`${suffix} ${placeholder}`}
     type={type}
